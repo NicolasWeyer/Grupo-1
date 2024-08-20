@@ -25,7 +25,9 @@ public class ej1 {
         // 5/5 + 11 = 12 <= 12, g(n) pertenece a O(n) ---> orden lineal
 
 
-        
+        //Punto b
+        //Sin Maps (lista)
+
 
 
     }
