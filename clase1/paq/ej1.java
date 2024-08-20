@@ -28,6 +28,11 @@ public class ej1 {
         //Punto b
         //Sin Maps (lista)
 
+        ListaC clientes = new ListaC();
+        ListaFac facturas = new ListaFac();
+        ListaFinal fin = new ListaFinal();
+
+        
 
 
     }

@@ -38,4 +38,8 @@ public class ListaFac {
         return origen;
     }
 
+    public boolean ListaVacia() { //costo constante
+        return (origen == null); 
+    }
+
 }
