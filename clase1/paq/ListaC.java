@@ -10,7 +10,7 @@ public class ListaC {
 
     Cliente origen = null;
 
-    public void Agregar(int num, String nom) {
+    public void Agregar(int num, String nom) { //costo constante
         Cliente nuevo = new Cliente();
         nuevo.id = num;
         nuevo.nombre = nom;
@@ -18,7 +18,7 @@ public class ListaC {
         origen = nuevo;
     }
 
-    public void Eliminar(int num) {
+    public void Eliminar(int num) {//costo lineal n por el while 
         if (origen != null) {
             if (origen.id == num) {
                 origen = origen.sig;
@@ -34,7 +34,7 @@ public class ListaC {
         }
     }
 
-    public Cliente Recuperar() {
+    public Cliente Recuperar() { //costo constante
         return origen;
     }
 
