@@ -9,13 +9,20 @@ public class ListaFinal {
     
     elem origen = null;
 
-    public void Agregar(int idC, String nombre, int imp) { //costo constante
-        elem nuevo = new elem();
-        nuevo.idc = idC;
-        nuevo.nom = nombre;
-        nuevo.total = imp;
-        nuevo.sig = origen;
-        origen = nuevo;
+    public void Agregar(int idC, String nombre, int imp) { //costo n + n por el pertenece y el while del else (costo lineal)
+        if (!this.Pertenece()) {
+            elem nuevo = new elem();
+            nuevo.idc = idC;
+            nuevo.nom = nombre;
+            nuevo.sig = origen;
+            origen = nuevo;
+        } else {
+            elem aux = origen;
+            while (aux.idc != idC) {
+                aux = aux.sig;
+            }
+            aux.total += imp;
+        }
     }
 
     public void Eliminar(int idC) { //costo lineal n por el while
@@ -40,6 +47,14 @@ public class ListaFinal {
 
     public boolean ListaVacia() { //costo constante
         return (origen == null); 
+    }
+
+    private boolean Pertenece(int idC) {//costo lineal n por el while
+        elem aux = origen;
+		while (elem != null && aux.idc != idC) {
+			aux = aux.sig;
+		}
+		return (aux != null); //aux va a ser null si recorrí toda la lista
     }
 
 }

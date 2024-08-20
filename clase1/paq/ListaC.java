@@ -42,4 +42,20 @@ public class ListaC {
         return (origen == null); 
     }
 
+    public String NombreCl(int num) { //costo lineal n por el while
+        String nomb = "";
+        if (origen != null) {
+            if (origen.id == num) {
+                nomb = origen.nombre;
+            } else {
+                Cliente aux = origen;
+                while (aux.id != num) {
+                    aux = aux.sig;
+                }
+                nomb = aux.nombre;
+            }
+        }
+        return nomb;
+    }
+
 }

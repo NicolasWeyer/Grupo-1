@@ -31,9 +31,17 @@ public class ej1 {
         ListaC clientes = new ListaC();
         ListaFac facturas = new ListaFac();
         ListaFinal fin = new ListaFinal();
+        ListaC copia = new ListaC(); //esto es para guardar los nombres de los clientes y poder usarlos como argumento para el último while
 
-        
-
+        while(!clientes.ListaVacia()) {
+            fin.Agregar(clientes.Recuperar().id, clientes.Recuperar().nombre, 0); //por ahora le agrego 0 al importe
+            copia.Agregar(clientes.Recuperar().id, clientes.Recuperar().nombre);
+            clientes.Eliminar(clientes.Recuperar().id);
+        }
+        while(!facturas.ListaVacia()) {
+            fin.Agregar(facturas.Recuperar().idc, copia.NombreCl(facturas.Recuperar().idc), facturas.Recuperar().importe);
+            facturas.Eliminar(facturas.Recuperar().idf); 
+        }
 
     }
 
