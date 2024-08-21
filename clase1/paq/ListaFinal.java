@@ -1,3 +1,5 @@
+package paq;
+
 public class ListaFinal {
 
     public class elem{
@@ -10,7 +12,7 @@ public class ListaFinal {
     elem origen = null;
 
     public void Agregar(int idC, String nombre, int imp) { //costo n + n por el pertenece y el while del else (costo lineal)
-        if (!this.Pertenece()) {
+        if (!this.Pertenece(idC)) {
             elem nuevo = new elem();
             nuevo.idc = idC;
             nuevo.nom = nombre;
@@ -51,7 +53,7 @@ public class ListaFinal {
 
     private boolean Pertenece(int idC) {//costo lineal n por el while
         elem aux = origen;
-		while (elem != null && aux.idc != idC) {
+		while (aux != null && aux.idc != idC) {
 			aux = aux.sig;
 		}
 		return (aux != null); //aux va a ser null si recorrí toda la lista

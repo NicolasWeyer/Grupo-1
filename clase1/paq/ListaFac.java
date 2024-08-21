@@ -1,3 +1,5 @@
+package paq;
+
 public class ListaFac {
 
     public class Factura{

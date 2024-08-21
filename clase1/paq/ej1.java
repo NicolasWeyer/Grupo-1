@@ -43,8 +43,9 @@ public class ej1 {
             facturas.Eliminar(facturas.Recuperar().idf); //eliminar = n
         }
 
-        //tengo n**2 + n**2, así que el costo es cuadrático. Más específico: (4 + (n + 1)(5n + 4n)) + ((n+1)(8n + 2n)) = 
-
+        //tengo n**2 + n**2, así que el costo es cuadrático. Más específico: (4 + (n + 1)(5n + 4n)) + ((n+1)(8n + 2n)) = 19n**2 + 19n + 4 --> g(n)
+        //con n = 2 y c = 30;    19n**2 + 19n + 4 <= n**2c
+        //19 + 19/n + 4/n**2 < c --> 19 + 9,5 + 1 = 29,5 <= 30, g(n) pertenece a O(n**2), es de orden cuadrático
     }
 
 }
