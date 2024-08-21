@@ -33,15 +33,17 @@ public class ej1 {
         ListaFinal fin = new ListaFinal();
         ListaC copia = new ListaC(); //esto es para guardar los nombres de los clientes y poder usarlos como argumento para el último while
 
-        while(!clientes.ListaVacia()) {
-            fin.Agregar(clientes.Recuperar().id, clientes.Recuperar().nombre, 0); //por ahora le agrego 0 al importe
-            copia.Agregar(clientes.Recuperar().id, clientes.Recuperar().nombre);
-            clientes.Eliminar(clientes.Recuperar().id);
+        while(!clientes.ListaVacia()) { //n (ListaVacia() es constante)
+            fin.Agregar(clientes.Recuperar().id, clientes.Recuperar().nombre, 0); //por ahora le agrego 0 al importe. Costo: agregar es n, recuperar es constante
+            copia.Agregar(clientes.Recuperar().id, clientes.Recuperar().nombre); //agregar en ListaC es constante y recuperar también
+            clientes.Eliminar(clientes.Recuperar().id); //eliminar es n
         }
-        while(!facturas.ListaVacia()) {
-            fin.Agregar(facturas.Recuperar().idc, copia.NombreCl(facturas.Recuperar().idc), facturas.Recuperar().importe);
-            facturas.Eliminar(facturas.Recuperar().idf); 
+        while(!facturas.ListaVacia()) { //n
+            fin.Agregar(facturas.Recuperar().idc, copia.NombreCl(facturas.Recuperar().idc), facturas.Recuperar().importe); //agregar = n
+            facturas.Eliminar(facturas.Recuperar().idf); //eliminar = n
         }
+
+        //tengo n**2 + n**2, así que el costo es cuadrático. Más específico: (4 + (n + 1)(5n + 4n)) + ((n+1)(8n + 2n)) = 
 
     }
 
