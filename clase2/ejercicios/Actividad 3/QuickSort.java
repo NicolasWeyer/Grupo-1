@@ -38,6 +38,26 @@ public class QuickSort {
         return i + 1; // Retorna el índice de la partición
     }
 
-    
+    // metodo para mostrar el resultado final del arreglo ordenado
+    public static void imprimirArreglo(int[] arreglo){
+        System.out.print("{ ");
+        for(int i= 0; i < arreglo.length;i++){
+            System.out.print(arreglo[i]+" ");
+        }
+        System.out.print("}");
+    }
+
+    // Utilizando el arreglo {3,5,1,10,15}
+    public static void main(String[] args) {
+
+        int[] Arreglo = {3,5,1,10,15};
+
+        quickSort(Arreglo, 0,Arreglo.length - 1);
+
+        imprimirArreglo(Arreglo);
+
+    }
+    // El resultado final por consola es: { 1 3 5 10 15 } (El arreglo ordenado)
+    }
     
 }
