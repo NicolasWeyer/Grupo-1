@@ -22,7 +22,7 @@ public class BusquedaBinaria {
     public static void main(String[] args) {
 
         int[] arreglo = {22, 31, 5, 47, 19, 11, 100};
-        int objetivo = 7;
+        int objetivo = 19;
         int resultado = busquedaBinaria(arreglo, objetivo);
 
         if (resultado == -1) {
