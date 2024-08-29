@@ -21,7 +21,7 @@ public class BusquedaBinaria {
 // Utilizando el siguiente main con el arreglo: {22, 31, 5, 47, 19, 11, 100}
     public static void main(String[] args) {
 
-        int[] arreglo = {22, 31, 5, 47, 19, 11, 100};
+        int[] arreglo = {5, 11, 19, 20, 22, 31, 47, 100};
         int objetivo = 19;
         int resultado = busquedaBinaria(arreglo, objetivo);
 
