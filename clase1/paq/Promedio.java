@@ -5,8 +5,10 @@ package paq;
     public static void main(String[] args) {
       int suma = 0; //1
       int total = 0; //1
-      for (int i = 0; i<matriz.length; i++){ //1 + 2.(n+1) + n
-        for (int j = 0; i<matriz[i].length;j++){ // n . (1 + 2.(n+1) + n)
+      int [][] matriz = {{1,2,3,4}, {5,6,7,8}};
+      
+      for (int i = 0; i < matriz.length; i++){ //1 + 2.(n+1) + n
+        for (int j = 0; i < matriz[i].length;j++){ // n . (1 + 2.(n+1) + n)
           suma+= matriz[i][j]; //2n
           total++; //n
         }
