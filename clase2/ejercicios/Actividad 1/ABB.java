@@ -35,7 +35,6 @@ public class ABB {
     */
 
 public static void main(String[] args) {
-    ABB a = new ABB();
     // Crear un árbol de ejemplo
     Nodo raiz = new Nodo(10);
     raiz.izq = new Nodo(5);
