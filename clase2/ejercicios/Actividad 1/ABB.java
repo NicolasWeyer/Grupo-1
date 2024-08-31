@@ -1,58 +1,74 @@
+package clase2.ejercicios;
 
-class Nodo {
-    int dato;
-    Nodo izq, der;
+public class ABB implements ITDAABB{
+    NodoABB raiz;
+	
+	public int Raiz() {
+		return raiz.dato;
+	}
 
-    public Nodo(int dato) {
-        this.dato = dato;
-        izq = der = null;
-    }
+	public ITDAABB HijoIzq() {
+		return raiz.hijoIzq;
+	}
+
+	public ITDAABB HijoDer() {
+		return raiz.HijoDer;
+	}
+
+	public boolean ArbolVacio() {
+		return raiz == null;
+	}
+
+	public void InicializarArbol() {
+		raiz = null;
+	}
+
+	public void AgregarElem(int x) {
+		if (raiz == null) {
+			raiz = new NodoABB();
+			raiz.dato = x;
+			raiz.hijoIzq = new ABB();
+			raiz.HijoDer = new ABB();
+			raiz.hijoIzq.InicializarArbol();
+			raiz.HijoDer.InicializarArbol();
+		} else if (raiz.dato < x){
+			raiz.HijoDer.AgregarElem(x);
+		} else if (raiz.dato > x) {
+			raiz.hijoIzq.AgregarElem(x);
+		}
+	}
+
+	public void EliminarElem(int x) {
+		if (raiz != null) {
+			if (raiz.dato == x && raiz.HijoDer.ArbolVacio() && raiz.hijoIzq.ArbolVacio()) {
+				raiz = null;
+			} else if (raiz.dato == x && !raiz.hijoIzq.ArbolVacio()) {
+				raiz.dato = this.mayor(raiz.hijoIzq);
+				raiz.hijoIzq.EliminarElem(raiz.dato);
+			} else if (raiz.dato == x && !raiz.HijoDer.ArbolVacio()) {
+				raiz.dato = this.menor(raiz.HijoDer);
+				raiz.HijoDer.EliminarElem(raiz.dato);
+			} else if (raiz.dato < x) {
+				raiz.HijoDer.EliminarElem(x);
+			} else {
+				raiz.hijoIzq.EliminarElem(x);
+			}
+		}
+	}
+
+	private int mayor(ITDAABB a) {
+		if (a.HijoDer().ArbolVacio()) {
+			return a.Raiz();
+		} else {
+			return mayor(a.HijoDer());
+		}
+	}
+	
+	private int menor(ITDAABB a) {
+		if (a.HijoIzq().ArbolVacio()) {
+			return a.Raiz();
+		} else {
+			return menor(a.HijoIzq());
+		}
+	}
 }
-
-public class ABB {
-
-    private static int getHeight(Nodo raiz) {
-        if(raiz==null) {
-            return -1;
-        } else {
-            return 1+ Math.max(getHeight(raiz.izq), getHeight(raiz.der));
-        }
-    }
-
-
-
-
-
-//Utilizando el siguiente main creamos un arbol de altura 3 de la forma:
-
-    /*                    10            altura 0
-                        /    \
-                       5      20        altura 1
-                      / \    /  \
-                     3   7  15  25      altura 2
-                                  \
-                                  30    altura 3
-    */
-
-public static void main(String[] args) {
-    // Crear un árbol de ejemplo
-    Nodo raiz = new Nodo(10);
-    raiz.izq = new Nodo(5);
-    raiz.der = new Nodo(20);
-    raiz.izq.izq = new Nodo(3);
-    raiz.izq.der = new Nodo(7);
-    raiz.der.izq = new Nodo(15);
-    raiz.der.der = new Nodo(25);
-    raiz.der.der.der = new Nodo(30);
-
-
-    System.out.println("Altura del arbol: " + getHeight(raiz));
-
-}}
-
-//resultado por consola: Altura del arbol: 3
-
-
-
-
-
