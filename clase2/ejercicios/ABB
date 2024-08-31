@@ -1,0 +1,56 @@
+public class ABB {
+		public static class Nodo {
+		    int dato;
+		    Nodo izq, der;
+	
+		    public Nodo(int dato) {
+		        this.dato = dato;
+		        izq = der = null;
+		    }
+		}
+	    // Método para buscar un valor en el BST
+	    public Nodo BuscarABB(Nodo raiz, int x) {
+	        if (raiz == null || raiz.dato == x) {
+	            return raiz;
+	        } else if (x < raiz.dato) {
+	            return BuscarABB(raiz.izq, x);
+	        } else {
+	        	return BuscarABB(raiz.der, x);
+	        }
+	    }
+
+	    private static int altura(Nodo raiz) {
+	        if(raiz==null) { 
+	            return -1;
+	        } else {
+	            return 1+ Math.max(altura(raiz.izq), altura(raiz.der));
+	        }    
+	    }
+
+	    public static void main(String[] args) {
+	        ABB a = new ABB();
+	        // Crear un árbol de ejemplo
+	        Nodo raiz = new Nodo(10);
+	        raiz.izq = new Nodo(5);
+	        raiz.der = new Nodo(20);
+	        raiz.izq.izq = new Nodo(3);
+	        raiz.izq.der = new Nodo(7);
+	        raiz.der.izq = new Nodo(15);
+	        raiz.der.der = new Nodo(25);
+	        raiz.der.der.der = new Nodo(30);
+
+	        // Buscar el valor 7 en el árbol
+	        int n = 7;
+	        Nodo resultado = a.BuscarABB(raiz, n);
+	        
+	        if (resultado != null) {
+	            System.out.println("Valor " + resultado.dato + " encontrado en el árbol.");
+	        } else {
+	            System.out.println("Valor no encontrado en el árbol.");
+	        }
+	        System.out.println("Altura del arbol " + altura(raiz));
+
+	    }
+	}
+
+
