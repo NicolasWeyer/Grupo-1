@@ -1,4 +1,3 @@
-package clase2.ejercicios;
 
 public class QuickSort {
 
@@ -60,4 +59,4 @@ public class QuickSort {
     // El resultado final por consola es: { 1 3 5 10 15 } (El arreglo ordenado)
     }
     
-}
+

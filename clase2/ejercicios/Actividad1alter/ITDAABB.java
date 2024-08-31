@@ -1,4 +1,4 @@
-package clase2.ejercicios;
+package clase2.ejercicios.Actividad1alter;
 
 public interface ITDAABB {
     int Raiz();
