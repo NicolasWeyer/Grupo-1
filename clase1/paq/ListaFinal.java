@@ -3,7 +3,7 @@ package paq;
 public class ListaFinal {
 
     public class elem{
-        int idc; //id cliente
+        int idc; //id cliente  
         String nom;
         int total;
         elem sig;
