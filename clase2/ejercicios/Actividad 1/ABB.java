@@ -21,7 +21,7 @@ public class ABB {
 
 
 
-}
+
 
 //Utilizando el siguiente main creamos un arbol de altura 3 de la forma:
 
@@ -49,7 +49,7 @@ public static void main(String[] args) {
 
     System.out.println("Altura del arbol: " + getHeight(raiz));
 
-}
+}}
 
 //resultado por consola: Altura del arbol: 3
 
