@@ -25,7 +25,9 @@ public class Act1 {
         }
     }
 
-    //El método máximo tiene costo 
+    //En ningún caso hay algún ciclo while o for, etc. que traiga un costo intrínseco, así que el costo se debe evaluar en cuanto
+    //al largo del array, que en el peor de los casos sería n, por lo tanto el método "maximo" pertenece a O(n) y su tiempo
+    //total es de T(n) = n*c, donde c es una constante. 
 
     public static void main(String[] args) {
 
@@ -46,7 +48,7 @@ public class Act1 {
         cuatro.nombre = "Jose";
         cuatro.scoring = 90;
 
-        Cliente[] clientes = {uno, dos, tres, cuatro}; 
+        Cliente[] clientes = {uno, dos, tres, cuatro}; //usamos array y no una lista para poder utilizar la técnica de divide y conquista
 
         //hasta acá el costo es constante (c). 
 
