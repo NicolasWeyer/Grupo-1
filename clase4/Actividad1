@@ -1,0 +1,20 @@
+public class Greedy {
+	public static void Monto(int monto) {
+		int[] billetes = {1,5,10,25}; //1
+		int[] cantidad = new int[billetes.length];//2
+		for(int i = billetes.length - 1; i >= 0 ; i--) { //2 + n+1 + n
+			cantidad[i]= monto/billetes[i]; 2n
+			monto=monto-billetes[i]*cantidad[i]; 3n
+		}
+		for(int i = billetes.length - 1; i >= 0 ; i--) { 
+			if (cantidad[i]!=0) {
+				System.out.println(cantidad[i] + " billetes de " + billetes[i]);
+			}
+		}
+	}
+	public static void main(String[] args) {
+		int m = 63;
+		Monto(m);
+	}
+
+}
