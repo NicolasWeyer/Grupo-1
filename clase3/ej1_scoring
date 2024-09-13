@@ -1,0 +1,39 @@
+public class Facturacion {
+	public static class Cliente {
+		int id;
+		String nombre;
+		int scoring;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cliente cliente1 = new Cliente();
+		Cliente cliente2 = new Cliente();
+		Cliente cliente3 = new Cliente();
+		Cliente cliente4 = new Cliente();
+		cliente1.id=1;
+		cliente1.nombre = "Franco";
+		cliente1.scoring = 40;
+		cliente2.id=2;
+		cliente2.nombre = "Julian";
+		cliente2.scoring = 50;
+		cliente3.id=3;
+		cliente3.nombre = "Tomas";
+		cliente3.scoring = 70;
+		cliente4.id=1;
+		cliente4.nombre = "Lucas";
+		cliente4.scoring = 60;
+		Cliente[] clientes = {cliente1,cliente2,cliente3,cliente4};
+		int mayor = Mayor(clientes);
+		System.out.println(mayor);
+	}
+	public static int Mayor(Cliente[] clientes) {
+		return Mayor(clientes,0,clientes.length-1);
+	}
+	public static int Mayor(Cliente[] clientes, int i, int f) {
+		if (i==f) return clientes[i].scoring;
+		int medio = (i + f)/2;
+		int maxizq = Mayor(clientes,i,medio);
+		int maxder = Mayor(clientes,medio+1,f);
+		return Math.max(maxizq,maxder);
+	}
+}
