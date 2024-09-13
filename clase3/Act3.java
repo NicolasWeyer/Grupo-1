@@ -47,4 +47,32 @@ public class Act3 {
         return new Cliente[]{mayor, segundoMayor};
     }
 
+    public static void main(String[] args) {
+
+        Cliente primero = new Cliente();
+        primero.scoring = 5;
+        primero.id = 1;
+        primero.nombre="Pepe";
+
+        Cliente segundo = new Cliente();
+        segundo.scoring = 6;
+        segundo.id = 2;
+        segundo.nombre="Steffy";
+
+        Cliente tercero = new Cliente();
+        tercero.scoring = 19;
+        tercero.id = 3;
+        tercero.nombre="Ricardo";
+
+        Cliente cuarto = new Cliente();
+        cuarto.scoring = 25;
+        cuarto.id = 4;
+        cuarto.nombre="Uma";
+
+        Cliente[] clientes = {primero, segundo, tercero, cuarto};
+        Cliente[] result = encontrarDosMayoresScorings(clientes);
+
+        System.out.println("El cliente con el mayor scoring es "+ result[0].nombre);
+        System.out.println("El cliente con el segundo mayor scoring es "+ result[1].nombre);
+    }
 }
