@@ -17,7 +17,7 @@ public class Act2 {
             }
         }
 
-        // Si hay un solo elemento, lo devolvemos como el mayor y el menor valor entero posible como segundo mayor
+        // Si hay un solo elemento, lo devuelvo como el mayor y el menor valor entero posible como segundo mayor
         if (inicio == fin) {
             return new int[]{arr[inicio], Integer.MIN_VALUE};
         }
@@ -40,6 +40,9 @@ public class Act2 {
         return new int[]{mayor, segundoMayor};
     }
 
+    // Como no hay ningun bucle while o for que traiga un coso intrínseco el costo se debe evaluar en base al largo del array, como
+    // en el peor de los casos sería n, el coste del metodo encontrarDosMayores es O(n) y su tiempo todoal es de T(n)=n*c
+
     public static void main(String[] args) {
         int[] lista = {12, 5, 9, 21, 15, 30, 7};
         int[] resultado = encontrarDosMayores(lista);
@@ -47,4 +50,5 @@ public class Act2 {
         System.out.println("El número mayor es: " + resultado[0]);
         System.out.println("El segundo número mayor es: " + resultado[1]);
     }
+    
 }
