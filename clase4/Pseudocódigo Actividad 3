@@ -1,0 +1,11 @@
+Actividad 3
+para cada item:
+    si la capacidad restante es mayor o igual al peso del item:
+        agregar item completo al camión
+        restar peso del item de la capacidad restante
+        sumar valor del item al valor total
+    sino:
+        agregar la fracción de item que cabe en la capacidad restante
+        sumar el valor proporcional de la fracción al valor_total
+        terminar el ciclo
+devolver lista de items seleccionados y valor_total
