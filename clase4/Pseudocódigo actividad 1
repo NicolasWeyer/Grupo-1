@@ -1,0 +1,13 @@
+Actividad 1
+Ordenar las monedas de mayor a menor denominación, se selecciona las mayores monedas 
+posibles para reducir la cantidad. Al final se verifica si se logra reducir 
+la cantidad a 0. Si no es así, no se puede dar el cambio exacto.
+
+ordenar monedas en orden descendente
+para cada moneda en monedas:
+    mientras cantidad sea mayor o igual a moneda:
+         restar moneda de cantidad
+si cantidad es igual a 0:
+    devolver verdadero
+sino:
+    devolver falso
