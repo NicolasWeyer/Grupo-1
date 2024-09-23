@@ -1,0 +1,9 @@
+Actividad 2
+para cada comprobante:
+    mientras cantidad sea mayor o igual a comprobante:
+        restar comprobante de cantidad
+        agregar comprobante a la lista resultado
+        si cantidad es igual a 0:
+            devolver resultado
+        sino:
+            devolver "No es posible hacer el cambio exacto"
