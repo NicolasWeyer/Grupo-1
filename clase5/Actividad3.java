@@ -42,12 +42,12 @@ class Arista {
 class AlgoritmoPrim {
     public static void prim(Grafo grafo) {
         int[] padre = new int[grafo.getV()]; // Array para almacenar el árbol
-        int[] clave = new int[grafo.getV()]; 
+        int[] clave = new int[grafo.getV()]; // getV = número de vértices
         boolean[] enMST = new boolean[grafo.getV()]; 
 
-        for (int i = 0; i < grafo.getV(); i++) {
+        for (int i = 0; i < grafo.getV(); i++) { //relleno claves con infinitos
             clave[i] = Integer.MAX_VALUE;
-            enMST[i] = false;
+            enMST[i] = false;    
         }
 
         // La primera clave es siempre 0
