@@ -17,8 +17,8 @@ public class Act_2 {
         colocarMueble(habitacion, 0, 0, 0); 
     }
 
-    public static boolean colocarMueble(int habitacion[][], int fila, int col, int reinasColocadas) {
-        if (reinasColocadas == 2) { 
+    public static boolean colocarMueble(int habitacion[][], int fila, int col, int mueblesColocados) {
+        if (mueblesColocados == 2) { 
             imprimirHabitacion(habitacion);
             return true;
         }
@@ -26,7 +26,7 @@ public class Act_2 {
             for (int j = col; j < N; j++) {
                 if (esSeguro(habitacion, i, j)) {
                     habitacion[i][j] = 1;
-                    colocarMueble(habitacion, i, j + 1, reinasColocadas + 1);
+                    colocarMueble(habitacion, i, j + 1, mueblesColocados + 1);
                     habitacion[i][j] = 0;
                 }
             }
