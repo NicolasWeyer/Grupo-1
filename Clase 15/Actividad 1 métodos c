@@ -1,0 +1,8 @@
+Mejoras Aleatorias
+Incorporan elementos aleatorios para escapar de mínimos locales y explorar soluciones más diversas.
+
+- Cadenas de Markov: Usan heurísticas locales como 2-opt para alcanzar soluciones cercanas a la óptima en problemas de hasta cientos de ciudades.
+Ejemplos de técnicas relacionadas:
+- Recocido simulado
+- Algoritmos genéticos
+- Búsqueda tabú
