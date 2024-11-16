@@ -1,0 +1,3 @@
+Cuando encuentra una solución válida (todas las reinas están colocadas sin conflictos):
+- La condición base del método solve (if (row == N)) se cumple, devolviendo true.
+- El tablero queda con una configuración válida de reinas.
