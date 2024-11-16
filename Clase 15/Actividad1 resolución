@@ -1,0 +1,6 @@
+El número total de combinaciones de rutas posibles en el TSP es equivalente al número de permutaciones de las n ciudades. Esto se calcula como:
+(n−1)!=(15−1)!=14!
+Cálculo:
+14!=14×13×12×11×10×9×8×7×6×5×4×3×2×1=87,178,291,200
+Conclusión: Para 15 ciudades, hay 87,178,291,200 combinaciones posibles. 
+Esto demuestra el rápido crecimiento del problema y la necesidad de métodos heurísticos para resolverlo en tiempos razonables.
