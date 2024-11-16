@@ -1,0 +1,6 @@
+El "retroceso" ocurre cuando:
+- Una posición de reina en el tablero (board[row][col]) se marca como vacía (board[row][col] = 0).
+- El algoritmo busca otra posición para la reina en la misma fila o regresa a filas anteriores para intentar nuevas configuraciones.
+En Python Tutor, este proceso se visualiza como una serie de llamadas recursivas apiladas, como un "deshacer" del estado 
+actual del tablero y una continuación del bucle en la fila previa. Cuando una solución falla, 
+las llamadas más recientes comienzan a eliminarse (desapilado), lo que refleja el retroceso en la búsqueda.
