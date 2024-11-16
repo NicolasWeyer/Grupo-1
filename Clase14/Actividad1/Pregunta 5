@@ -1,0 +1,5 @@
+Para aumentar N a 8, solo habría que cambiar la constante N:
+N=8
+
+El tiempo de ejecución aumentará exponencialmente porque el problema tiene un crecimiento factorial NxN = O(N!) en el número 
+de posibles configuraciones iniciales.
