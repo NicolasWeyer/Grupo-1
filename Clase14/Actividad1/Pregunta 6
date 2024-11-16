@@ -1,0 +1,6 @@
+El método isSafe es crucial porque:
+- Garantiza que cada reina se coloque en una posición donde no sea atacada por otra reina, verificando las reglas del ajedrez: No 
+  compartir columna y no compartir diagonal
+- Reduce el espacio de búsqueda al evitar configuraciones inválidas desde el inicio.
+Sin isSafe, el algoritmo tendría que explorar todas las configuraciones posibles, lo que sería 
+muy costoso para valores altos de N.
