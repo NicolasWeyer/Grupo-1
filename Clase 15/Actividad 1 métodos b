@@ -1,0 +1,10 @@
+Mejora Iterativa
+A partir de una solución inicial, las heurísticas iterativas buscan mejorarla mediante modificaciones locales.
+
+- Intercambio 2-opt: Elimina dos aristas de la ruta y las reemplaza con otras dos, reconectando los fragmentos. Reduce la longitud de la ruta iterativamente. Es eficiente, 
+  pero puede quedar atrapado en mínimos locales.
+- Heurística k-opt: Extiende el concepto del 2-opt eliminando k aristas y reconectando los fragmentos.
+  Ejemplo: 3-opt (elimina tres aristas), que puede encontrar mejores soluciones que el 2-opt, aunque requiere más tiempo de cálculo.
+- Heurística V-opt (Variable-opt): Generaliza k-opt eliminando un número variable de aristas, dependiendo de las mejoras detectadas.
+- Método Lin-Kernighan: Publicado en 1972, es un caso especial del V-opt. Ha sido mejorado con ideas de algoritmos evolutivos y búsqueda tabú (Lin-Kernighan-Johnson). Se considera 
+  una de las heurísticas más potentes para el TSP, alcanzando soluciones muy cercanas a la óptima.
