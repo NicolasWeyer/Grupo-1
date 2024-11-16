@@ -1,0 +1,17 @@
+Los métodos heurísticos son estrategias que no garantizan encontrar la solución óptima, pero generan soluciones cercanas en un tiempo razonable. 
+En el caso del TSP, los métodos más conocidos son:
+
+- Heurísticas Constructivas: Las heurísticas constructivas generan una solución inicial siguiendo reglas simples. Aunque suelen ser rápidas, 
+la calidad de la solución puede variar considerablemente.
+
+    - Algoritmo del Vecino Más Próximo (NN): El viajero selecciona la ciudad no visitada más cercana como siguiente destino. Es rápido, pero puede generar 
+      rutas que son en promedio un 25% más largas que la óptima.
+      En distribuciones específicas de las ciudades, NN puede devolver rutas significativamente malas.
+
+    - Variación: Operador de Fragmento Más Cercano (NF): En lugar de elegir una ciudad individual, conecta fragmentos de ciudades cercanas. Puede usarse para mejorar 
+      soluciones iniciales del algoritmo NN en modelos elitistas.
+    - Algoritmo Basado en Árbol de Expansión Mínima: Utiliza un árbol de expansión mínima para conectar ciudades, garantizando que ninguna arista sea redundante. El algoritmo de 
+      Christofides mejora esta técnica para obtener rutas cuya longitud es como máximo un 50% mayor que la óptima.
+    - Match Twice and Stitch (MTS): Realiza dos emparejamientos secuenciales:
+        El segundo emparejamiento elimina las aristas del primero.
+        Los ciclos resultantes se unen para formar una única ruta.
