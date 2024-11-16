@@ -1,0 +1,7 @@
+El algoritmo de backtracking resuelve el problema de las N-Reinas explorando todas las posibles configuraciones de las reinas en el tablero, 
+pero retrocediendo cuando detecta una configuración inválida. Esto se logra mediante:
+- Intentar colocar una reina en cada columna de la fila actual.
+- Usar la función isSafe para verificar si la posición es válida.
+- Si es válida, colocar la reina y continuar con la siguiente fila (solve(board, row + 1)).
+- Si ninguna configuración en la fila siguiente conduce a una solución, descolocar la reina de la posición actual (backtracking) y probar la siguiente columna.
+- Repetir hasta encontrar una solución o confirmar que no hay ninguna posible.
