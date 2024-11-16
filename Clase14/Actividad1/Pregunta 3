@@ -1,0 +1,6 @@
+Si el algoritmo no encuentra una posición válida para una reina en una fila, 
+significa que la solución actual no es viable. En este caso se realiza lo siguiente:
+- Descoloca la reina anterior (retrocede) y prueba con la siguiente posición disponible.
+- Si todas las posiciones ya fueron probadas y fallaron, retrocede nuevamente hasta encontrar otra opción.
+- Si, después de explorar todas las configuraciones posibles, no hay solución, 
+  el método solve retorna false, y no se imprime ningún tablero válido.
