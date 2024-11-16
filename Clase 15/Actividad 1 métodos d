@@ -1,0 +1,11 @@
+Optimización por Colonia de Hormigas (ACS)
+Inspirado en el comportamiento de las hormigas reales al encontrar caminos óptimos hacia una fuente de alimento:
+
+Funcionamiento:
+- Agentes virtuales (hormigas) exploran las rutas posibles.
+- Cada hormiga elige su próximo destino combinando dos criterios:
+- Distancia a la ciudad.
+- Cantidad de feromonas acumuladas en el camino.
+Una vez completado el recorrido, la hormiga que encontró el camino más corto deposita más feromonas, aumentando la probabilidad de que otras hormigas sigan esa ruta.
+- Es altamente escalable y eficiente para problemas grandes.
+. Encuentra buenas soluciones para problemas con cientos o miles de ciudades.
