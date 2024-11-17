@@ -12,3 +12,21 @@
    3- Validación de entradas del usuario: Filtrar entradas sospechosas para evitar inyecciones de código.
    4- Bloqueo de direcciones IP sospechosas: Usar firewalls para evitar acceso de atacantes.
    5- Escaneo de archivos subidos: Analizar documentos en busca de malware.
+
+3) Aplicacion de la poda Alfa-Beta:
+
+Cuando en una rama del arbol de decisión se detecta algun tipo de ataque ya mencionado se aplica la poda
+Alfa-Beta, podando esa rama en concreto
+
+4) Arbol de decisión simplificado:
+
+Raíz: Inicio del ataque
+        ├── Opción 1: Fuerza bruta
+        │     ├── Monitorear intentos de login
+        │     └── Detectar alerta
+        ├── Opción 2: Inyección SQL
+        │     ├── Validar entrada de datos
+        │     └── Detectar alerta
+        └── Opción 3: Ataque DDoS
+               ├── Limitar solicitudes por IP
+               └── Detectar alerta
