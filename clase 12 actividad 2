@@ -1,0 +1,36 @@
+package clase12;
+
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.LinkedList;
+
+public class Actividad2 {
+	public static void AgregarVertice(int vertice, Map<Integer,ArrayList<Integer>> grafo  ) {
+		ArrayList<Integer> conexiones = new ArrayList<>();
+		grafo.put(vertice, conexiones);
+	}
+	public static void AgregarArista(int v1, int v2, Map<Integer,ArrayList<Integer>> grafo ) {
+		ArrayList<Integer> conexiones = grafo.get(v1);
+		conexiones.add(v2);
+	}
+	public static void BFS(int inicio) {
+        boolean[] visitado = new boolean[6]; // Array de visitados
+        LinkedList<Integer> cola = new LinkedList<>(); // Cola para BFS
+
+        visitado[inicio] = true; // Marcar el nodo de inicio como visitado
+        cola.add(inicio); // Añadirlo a la cola
+
+        while (!cola.isEmpty()) {
+            inicio = cola.poll(); // Extraer el primer nodo de la cola
+            System.out.print(inicio + " "); // Procesar el nodo
+
+            // Obtener todos los nodos adyacentes de "inicio"
+            for (int n =0; n<visitado.length;n++) {
+                if (!visitado[n]) {
+                    visitado[n] = true; // Marcar como visitado
+                    cola.add(n); // Añadir a la cola
+                }
+            }
+        }
+    }
+}
