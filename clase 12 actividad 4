@@ -1,0 +1,54 @@
+package clase12;
+
+import java.util.LinkedList;
+
+public class Grafo {
+    private int V; // número de vértices
+    private LinkedList<Usuario>[] adj; 
+
+    public Grafo(int V) {
+        this.V = V;
+        adj = new LinkedList[V];
+        for (int i = 0; i < V; ++i) {
+            adj[i] = new LinkedList<>();
+        }
+    }
+
+    public void agregarArista(int v, int w) {
+        adj[v].add(w); 
+    }
+
+    public void BFS(int inicio) {
+        boolean[] visitado = new boolean[V]; 
+        LinkedList<Usuario> cola = new LinkedList<>(); 
+
+        visitado[inicio] = true; 
+        cola.add(inicio); 
+
+        while (!cola.isEmpty()) {
+            inicio = cola.poll(); 
+            System.out.print(inicio + " "); 
+            for (int n : adj[inicio]) {
+                if (!visitado[n]) {
+                    visitado[n] = true; 
+                    cola.add(n); 
+                }
+            }
+        }
+    }
+
+    private void DFSUtil(int v, boolean[] visitado) {
+        visitado[v] = true;
+        System.out.print(v + " ");
+        for (int n : adj[v]) {
+            if (!visitado[n]) {
+                DFSUtil(n, visitado); 
+            }
+        }
+    }
+
+    public void DFS(int inicio) {
+        boolean[] visitado = new boolean[V];
+        DFSUtil(inicio, visitado);
+    }
+}
