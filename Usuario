@@ -1,0 +1,6 @@
+package clase12;
+
+public class Usuario {
+  int id;
+  String nombre;
+}
